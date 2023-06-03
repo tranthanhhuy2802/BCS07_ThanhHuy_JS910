@@ -10,26 +10,23 @@ function getInformation() {
   var _gioLam = document.getElementById("gioLam").value * 1;
 
   var valid = true;
-  valid &= kiemTraRong(_taiKhoanNV, "tbTKNV");
-  kiemTraRong(_tenNV, "tbTen");
-  kiemTraRong(_email, "tbEmail");
-  kiemTraRong(_matKhau, "tbMatKhau");
-  kiemTraRong(_ngayLam, "tbNgay");
-  kiemTraRong(_luongCoBan, "tbLuongCB");
-  kiemTraRong(_chucVu, "tbChucVu");
-  kiemTraRong(_gioLam, "tbGiolam");
-
-  // kiemTraDoDai(_taiKhoanNV, "tbTKNV") &
-
-  // kiemTraEmail(_email, "tbEmail") &
-
-  // kiemTraPassword(_matKhau, "tbMatKhau") &
-
-  // kiemTraLuongCB(_luongCoBan, "tbLuongCB") &
-  // kiemTraDateFormat(_ngayLam, "tbNgay") &
-  // kiemTraGioLam(_gioLam, "gioLam") &
-  // kiemTraChucVu(_chucVu, "tbChucVu") &
-  // kiemTraKyTu(_tenNV, "tbTen") &
+  valid =
+    kiemTraRong(_taiKhoanNV, "tbTKNV") &
+    kiemTraRong(_tenNV, "tbTen") &
+    kiemTraRong(_email, "tbEmail") &
+    kiemTraRong(_ngayLam, "tbNgay") &
+    kiemTraRong(_matKhau, "tbMatKhau") &
+    kiemTraRong(_luongCoBan, "tbLuongCB") &
+    kiemTraRong(_chucVu, "tbChucVu") &
+    kiemTraRong(_gioLam, "tbGiolam") &
+    kiemTraDoDai(_taiKhoanNV, "tbTKNV", 4, 6) &
+    kiemTraEmail(_email, "tbEmail") &
+    kiemTraPassword(_matKhau, "tbMatKhau") &
+    kiemTraLuongCB(_luongCoBan, "tbLuongCB") &
+    kiemTraDateFormat(_ngayLam, "tbNgay") &
+    kiemTraGioLam(_gioLam, "gioLam", 80, 200) &
+    kiemTraChucVu(_chucVu, "tbChucVu") &
+    kiemTraKyTu(_tenNV, "tbTen");
 
   if (!valid) {
     return;

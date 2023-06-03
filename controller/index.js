@@ -4,11 +4,13 @@ Render();
 //thêm Nhân Viên
 function themNhanVien() {
   var nhanVien = getInformation();
-  arrNhanVien.push(nhanVien);
-  saveStorage(arrNhanVien);
-  console.log(arrNhanVien);
-  Render();
-  document.querySelector("form").reset();
+  if (nhanVien) {
+    arrNhanVien.push(nhanVien);
+    saveStorage(arrNhanVien);
+    Render();
+    // console.log(arrNhanVien);
+    document.querySelector("form").reset();
+  }
 }
 // xoa nhan vien
 function xoaNhanVien(taiKhoanNV) {
